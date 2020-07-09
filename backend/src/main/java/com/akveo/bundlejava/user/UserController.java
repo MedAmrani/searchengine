@@ -26,7 +26,7 @@ import static org.springframework.http.ResponseEntity.ok;
  * Controller for managing users
  */
 @Controller
-@RequestMapping("/users")
+@RequestMapping("api/users")
 public class UserController {
 
     private UserService userService;
