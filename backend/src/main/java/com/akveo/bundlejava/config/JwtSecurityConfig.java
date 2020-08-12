@@ -62,12 +62,12 @@ public class JwtSecurityConfig extends WebSecurityConfigurerAdapter {
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 
         http.authorizeRequests()
-                .antMatchers(HttpMethod.POST, "/auth/login").permitAll()
-                .antMatchers(HttpMethod.POST, "/auth/restore-pass").permitAll()
-                .antMatchers(HttpMethod.POST, "/auth/sign-up").permitAll()
-                .antMatchers(HttpMethod.POST, "/auth/request-pass").permitAll()
-                .antMatchers(HttpMethod.POST, "/auth/sign-out").permitAll()
-                .antMatchers(HttpMethod.POST, "/auth/refresh-token").permitAll()
+                .antMatchers(HttpMethod.POST, "/api/auth/login").permitAll()
+                .antMatchers(HttpMethod.POST, "/api/auth/restore-pass").permitAll()
+                .antMatchers(HttpMethod.POST, "/api/auth/sign-up").permitAll()
+                .antMatchers(HttpMethod.POST, "/api/auth/request-pass").permitAll()
+                .antMatchers(HttpMethod.POST, "/api/auth/sign-out").permitAll()
+                .antMatchers(HttpMethod.POST, "/api/auth/refresh-token").permitAll()
                 .antMatchers(AUTH_WHITELIST).permitAll()
                 .anyRequest().authenticated();
 
