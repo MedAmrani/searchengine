@@ -26,7 +26,7 @@ public class TraitementServiceHelper {
         builder.must(new QueryStringQueryBuilder("man").field("processName"));
         FieldSortBuilder sort = SortBuilders.fieldSort("processName").order(SortOrder.DESC);
         PageRequest page = PageRequest.of(0, 1000);
-        NativeSearchQueryBuilder nativeSearchQueryBuilder = new NativeSearchQueryBuilder();
+        ///NativeSearchQueryBuilder nativeSearchQueryBuilder = new NativeSearchQueryBuilder();
         nativeSearchQueryBuilder.withQuery(builder);
         nativeSearchQueryBuilder.withPageable(page);
         nativeSearchQueryBuilder.withSort(sort);

@@ -29,7 +29,7 @@ import static org.springframework.http.ResponseEntity.ok;
  * Controller which provides functionality for authentication
  */
 @Controller
-@RequestMapping("api/auth")
+@RequestMapping("/api/auth")
 public class AuthController {
 
     private final AuthService authService;

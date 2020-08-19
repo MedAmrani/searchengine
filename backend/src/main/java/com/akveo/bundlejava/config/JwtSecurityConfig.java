@@ -68,6 +68,12 @@ public class JwtSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.POST, "/api/auth/request-pass").permitAll()
                 .antMatchers(HttpMethod.POST, "/api/auth/sign-out").permitAll()
                 .antMatchers(HttpMethod.POST, "/api/auth/refresh-token").permitAll()
+                .antMatchers(HttpMethod.POST,"/api/search/content").permitAll()
+                .antMatchers(HttpMethod.POST,"/api/search/author").permitAll()
+                .antMatchers(HttpMethod.POST, "/api/search/dateRange").permitAll()
+                .antMatchers(HttpMethod.POST, "/api/search/extension").permitAll()
+                .antMatchers(HttpMethod.POST, "/api/search/title").permitAll()
+                .antMatchers(HttpMethod.GET, "/api/search").permitAll()
                 .antMatchers(AUTH_WHITELIST).permitAll()
                 .anyRequest().authenticated();
 

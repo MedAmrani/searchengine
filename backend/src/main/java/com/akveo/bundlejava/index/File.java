@@ -8,6 +8,7 @@ import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldType;
 
 import java.time.OffsetDateTime;
+import java.util.Date;
 
 
 @Data
@@ -23,16 +24,16 @@ public class File {
     private String contentType;
 
     @Field(type = FieldType.Date,format = DateFormat.date_optional_time)
-    private OffsetDateTime created;
+    private Date created;
 
     @Field(type = FieldType.Date,format = DateFormat.date_optional_time,name = "last_modified")
-    private OffsetDateTime lastModified;
+    private Date lastModified;
 
     @Field(type = FieldType.Date,format = DateFormat.date_optional_time,name ="last_accessed" )
-    private OffsetDateTime lastAccessed;
+    private Date lastAccessed;
 
     @Field(type = FieldType.Date,format = DateFormat.date_optional_time,name = "indexing_date")
-    private OffsetDateTime indexingDate;
+    private Date indexingDate;
 
     @Field(type = FieldType.Long)
     private long filesize;

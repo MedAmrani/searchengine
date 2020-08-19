@@ -6,6 +6,7 @@ import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldType;
 
 import java.time.OffsetDateTime;
+import java.util.Date;
 
 @Data
 @AllArgsConstructor
@@ -20,7 +21,7 @@ public class FileMetaData {
     private String title;
 
     @Field(type = FieldType.Date,format = DateFormat.date_optional_time)
-    private OffsetDateTime date;
+    private Date date;
 
     @Field(type = FieldType.Text)
     private String[] keywords;
@@ -32,5 +33,5 @@ public class FileMetaData {
     private String creatorTool;
 
     @Field(type = FieldType.Date,format = DateFormat.date_optional_time)
-    private OffsetDateTime created;
+    private Date created;
 }

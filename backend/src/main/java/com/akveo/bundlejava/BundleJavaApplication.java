@@ -41,7 +41,9 @@ public class BundleJavaApplication {
 //                    .meta(FileMetaData.builder().date(OffsetDateTime.parse("2018-03-08T09:39:05.000+00:00"))
 //                            .build()).build();
 //            fileSearch.save(resume);
-                          fileSearch.findAll().forEach(file -> System.out.println(file.getMeta()));
+//                          fileSearch.findAll().forEach(file -> System.out.println(file.getMeta()));
+            fileSearch.findByAuthor("Bako Ali").forEach(file -> System.out.println(file.getMeta()));
+
         };
     }
 
